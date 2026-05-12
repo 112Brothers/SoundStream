@@ -1,0 +1,7 @@
+checkpoint: null      # path to .pt file
+data: null            # dataset for evaluation
+audio_file: null      # single audio file
+output: recon.wav
+batch: 1
+workers: 2
+no_nisqa: false

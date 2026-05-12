@@ -1,0 +1,27 @@
+model:
+  C: 32
+  D: 500
+  K: 512
+  num_q: 8
+
+data:
+  train: null          # path LibriSpeech train-clean-100
+  eval: null
+  crop_samples: 8000   # 0.5s at 16khz
+  workers: 4
+
+training:
+  steps: 45000
+  batch: 8
+  accum: 3             # effective batch = batch * accum
+  eval_batch: 4
+  lr: 1.0e-4
+  ckpt_dir: checkpoints
+  ckpt_every: 5000
+  nisqa_every: 4       # NISQA every N epochs
+  no_amp: false
+  resume: null
+
+logging:
+  comet_key: null      # or set COMET_API_KEY env var
+  project_name: soundstream
