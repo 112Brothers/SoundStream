@@ -1,5 +1,7 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+
 import gc
-import os
 
 import torch
 from torch import amp

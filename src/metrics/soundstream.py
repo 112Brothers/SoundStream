@@ -1,6 +1,9 @@
 import torch
 from torch import nn
 
+from torchmetrics.audio import ShortTimeObjectiveIntelligibility
+from torchmetrics.audio.nisqa import NonIntrusiveSpeechQualityAssessment
+
 class STOIMetric(nn.Module):
     def __init__(self, sample_rate=16000, extended=False):
         super().__init__()
