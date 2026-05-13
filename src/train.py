@@ -7,9 +7,8 @@ import torch
 from omegaconf import DictConfig
 from torch.utils.data import DataLoader
 
-_CFG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "configs")
 
-@hydra.main(version_base=None, config_path=_CFG_PATH, config_name="soundstream")
+@hydra.main(version_base=None, config_path="configs", config_name="soundstream")
 def main(cfg: DictConfig) -> None:
     from model import SoundStream, Discriminator
     from datasets import get_loader
