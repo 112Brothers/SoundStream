@@ -1,4 +1,15 @@
 # SoundStream Neural Audio Codec
 
-Implementantion of [SoundStream](https://arxiv.org/abs/2107.03312) neural audio codec for speech data (LibriSpeech, 16kHz).
+Implementation of the SoundStream neural audio codec for speech compression and reconstruction.
 
+The model is trained on the LibriSpeech dataset (train-clean-100) at 16kHz sampling rate.
+
+Pretrained checkpoint is available on HuggingFace:
+https://huggingface.co/alexok2006/SoundStream_Implementation/
+
+---
+
+## 📦 Installation
+
+```bash
+pip install -r requirements.txt
